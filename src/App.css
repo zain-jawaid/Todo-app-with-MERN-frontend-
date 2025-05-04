@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+.main {
+align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+.editBtn{
+    color: white !important;
+    background-color: rgb(11, 134, 0) !important;
+    border: none !important;
+}
+.deleteBtn{
+    color: white !important;
+    background-color: red !important;
+    border: none !important;
+}
