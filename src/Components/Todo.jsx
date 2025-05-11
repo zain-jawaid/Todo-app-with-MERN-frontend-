@@ -240,7 +240,7 @@ function Todo() {
 
   const completeTodo = (id) => {
     axios.put(
-      `https://todo-app-with-mern-backend.onrender.com/update/${id}/complete`,
+      `https://todo-app-with-mern-backend.onrender.com/update/${id}`,
       {},
       {
         headers: {
