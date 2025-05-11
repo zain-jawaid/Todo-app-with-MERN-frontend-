@@ -20,14 +20,14 @@ export default function SignUp() {
 
     // Check if email is already registered
     axios
-      .post('http://localhost:4000/check-email', { email }) // Assuming you create an endpoint for this
+      .post('https://todo-app-with-mern-backend.onrender.com/check-email', { email }) // Assuming you create an endpoint for this
       .then((response) => {
         if (response.data.exists) {
           setError('Email is already registered');
         } else {
           // Proceed with sign-up if email is not registered
           axios
-            .post('http://localhost:4000/signup', { name, email, password })
+            .post('https://todo-app-with-mern-backend.onrender.com/signup', { name, email, password })
             .then((result) => {
               console.log(result);
               setName('');
