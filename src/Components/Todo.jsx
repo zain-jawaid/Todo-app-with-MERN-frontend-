@@ -32,7 +32,7 @@ function Todo() {
       editTodo(id, task); // call editTodo function
     } else {
       axios.post(
-        "https://todo-app-with-mern-backend.onrender.com/api/todos", 
+        "https://todo-app-with-mern-backend.onrender.com/todos", 
         { task: task },
         {
           headers: {
@@ -50,7 +50,7 @@ function Todo() {
 
   useEffect(() => { 
     axios.get(
-      'https://todo-app-with-mern-backend.onrender.com/api/todos',
+      'https://todo-app-with-mern-backend.onrender.com/todos',
       {
         headers: {
           Authorization: `Bearer ${authToken}`
@@ -63,7 +63,7 @@ function Todo() {
 
   const editTodo = (id, newTask) => {
     axios.put(
-      `https://todo-app-with-mern-backend.onrender.com/api/todos/${id}`, 
+      `https://todo-app-with-mern-backend.onrender.com/todos/${id}`, 
       { task: newTask },
       {
         headers: {
@@ -89,7 +89,7 @@ function Todo() {
 
   const completeTodo = (id) => {
     axios.put(
-      `https://todo-app-with-mern-backend.onrender.com/api/todos/${id}/complete`,
+      `https://todo-app-with-mern-backend.onrender.com/todos/${id}/complete`,
       {},
       {
         headers: {
@@ -108,7 +108,7 @@ function Todo() {
 
   const deleteTodo = (id) => {
     axios.delete(
-      `https://todo-app-with-mern-backend.onrender.com/api/todos/${id}`,
+      `https://todo-app-with-mern-backend.onrender.com/todos/${id}`,
       {
         headers: {
           Authorization: `Bearer ${authToken}`
@@ -124,7 +124,7 @@ function Todo() {
 
   const deleteAllTodo = () => {
     axios.delete(
-      'https://todo-app-with-mern-backend.onrender.com/api/todos',
+      'https://todo-app-with-mern-backend.onrender.com/todos',
       {
         headers: {
           Authorization: `Bearer ${authToken}`
